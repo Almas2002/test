@@ -1,9 +1,9 @@
 const server = require('express')
-
+require('dotenv').config()
 const app = server();
 
 app.get('/',(req,res)=>{
-    res.json({message:"hello world"})
+    res.json({message:process.env.HELLO})
 })
 
 
